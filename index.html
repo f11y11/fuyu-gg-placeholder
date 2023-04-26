@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking in progress | fuyu.gg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span id="pan" style="text-align: center; display: block; font-size: 5.5rem;">🍳</span>
+            <span id="text">Cooking in progress</span>
+        </h1>
+    </span></h1>
+        <footer>
+            <div style="display: flex; align-items: center; flex-grow: 1;">
+                <!-- <img src="static/logo.png" alt="logo" width="20"> -->
+                <small style="margin-left: 5px;">
+                    fuyu.gg
+                    &VerticalBar; 全著作権所有    
+                </small>
+            </div>
+            <div>
+                <ul style="list-style-type: none; width: 100%; padding: 0;">
+                    <li>
+                        <a role="button" href="mailto:contact@fuyu.gg"><i class="fa fa-envelope">&nbsp;</i></a>
+                        <a role="button" href="https://discord.gg/UqrbWKHHz3"><i class="fab fa-discord">&nbsp;</i></a>
+                        <a role="button" href="https://github.com/f11y11"><i class="fab fa-github">&nbsp;</i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+(() => {
+    let interval = setInterval(() => {
+        let text = document.getElementById('text')
+        if (!text.innerText.endsWith('...')) {
+            text.innerText+='.'
+        }
+        else {
+            clearInterval(interval);
+        }
+    }, 1000)
+    document.getElementById('curryear').innerText = new Date().getFullYear();
+})()
+</script>
+</html>
